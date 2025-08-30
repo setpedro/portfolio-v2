@@ -1,8 +1,11 @@
+import { Navbar } from "@/components/Navbar";
+import { Button } from "@/components/ui/Button";
+
 export default function Home() {
     return (
-        <div className="flex flex-col min-h-screen gap-8 px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40">
+        <div className="flex flex-col min-h-screen gap-6 px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40">
             {/* navbar */}
-            <div className="h-16"></div>
+            <Navbar />
 
             {/* header */}
             <div className="flex flex-col lg:flex-row lg:gap-3">
@@ -16,9 +19,9 @@ export default function Home() {
             </div>
 
             {/* content */}
-            <div className="flex flex-1 w-fit mt-8 sm:mt-13 lg:gap-18">
+            <div className="flex flex-1 w-fit sm:mt-6 md:mt-12 lg:gap-18">
                 {/* box & cta */}
-                <div className="flex flex-col gap-10 sm:gap-16 lg:justify-between sm:pb-40 sm:px-4 lg:pr-0 pt-4 w-full lg:w-4/5 xl:w-3/4">
+                <div className="flex flex-col gap-10 sm:gap-16 lg:justify-between sm:pb-40 sm:px-4 lg:pr-0 pt-2 lg:pt-4 w-full lg:w-4/5 xl:w-3/4">
                     {/* box */}
                     <div className="flex flex-col mx-2 gap-5 p-4 sm:p-6 border border-accent">
                         {/* piece of info */}
@@ -30,7 +33,7 @@ export default function Home() {
                             </p>
                         </div>
                         {/* piece of info */}
-                        <div className="flex font-semibold">
+                        <div className="flex font-semibold sm:text-xl">
                             <span className="mr-1">{">"}</span>
                             <p>
                                 currently: looking for my next role or project
@@ -74,13 +77,13 @@ export default function Home() {
                     </div>
 
                     {/* cta */}
-                    <div className="flex font-bold text-lg sm:text-3xl gap-1 flex-nowrap">
-                        <button className="text-accent whitespace-nowrap">
-                            [ View projects ]
-                        </button>
-                        <button className="whitespace-nowrap">
+                    <div className="flex gap-1 flex-nowrap">
+                        <Button size="xl" color="accent">
+                            [ View projects]
+                        </Button>
+                        <Button size="xl" color="foreground">
                             [ Contact me ]
-                        </button>
+                        </Button>
                     </div>
                 </div>
 
