@@ -1,23 +1,15 @@
+import { SectionId, sectionsData } from "@/lib/consts/sections";
 import { Button } from "./ui/Button";
 
-type Section = "Projects" | "About" | "Socials";
-
-const getButtonColor = (
-    section: Section,
-    activeSection: Section
-): "accent" | "foreground" => {
-    return activeSection === section ? "accent" : "foreground";
-};
-
 export function Navbar() {
-    const sections: Section[] = ["Projects", "About", "Socials"];
+    const sections = sectionsData.filter((section) => section.id !== "hero");
 
     // TODO: replace with actual state (scroll-spy)
-    const activeSection: Section = "Projects";
+    const activeSection: SectionId = "hero";
 
     return (
         <div className="flex justify-between py-5">
-            <Button size="md" color="foreground">
+            <Button size="md" color={getButtonColor("hero", activeSection)}>
                 [
                 <span className="inline sm:hidden w-[0.25em]" />
                 <span className="hidden sm:inline w-[0.6em]" />
@@ -27,16 +19,16 @@ export function Navbar() {
             </Button>
 
             <div className="flex items-center gap-1 flex-nowrap">
-                {sections.map((section) => (
+                {sections.map(({ id }) => (
                     <Button
-                        key={section}
+                        key={id}
                         size="md"
-                        color={getButtonColor(section, activeSection)}
+                        color={getButtonColor(id, activeSection)}
                     >
                         [
                         <span className="inline sm:hidden w-[0.25em]" />
                         <span className="hidden sm:inline w-[0.6em]" />
-                        {section}
+                        <span className="capitalize">{id}</span>
                         <span className="inline sm:hidden w-[0.25em]" />
                         <span className="hidden sm:inline w-[0.6em]" />]
                     </Button>
@@ -44,4 +36,11 @@ export function Navbar() {
             </div>
         </div>
     );
+}
+
+function getButtonColor(
+    sectionId: SectionId,
+    activeSection: SectionId
+): "accent" | "foreground" {
+    return activeSection === sectionId ? "accent" : "foreground";
 }
