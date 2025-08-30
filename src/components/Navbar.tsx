@@ -1,5 +1,6 @@
 import { SectionId, sectionsData } from "@/lib/consts/sections";
 import { Button } from "./ui/Button";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
     const sections = sectionsData.filter((section) => section.id !== "hero");
@@ -8,7 +9,12 @@ export function Navbar() {
     const activeSection: SectionId = "hero";
 
     return (
-        <div className="flex justify-between py-5">
+        <div
+            className={cn(
+                "flex justify-between py-5 px-4 backdrop-blur-sm bg-background/80",
+                "shadow-[0_4px_6px_-2px_theme(colors.background)]"
+            )}
+        >
             <Button size="md" color={getButtonColor("hero", activeSection)}>
                 [
                 <span className="inline sm:hidden w-[0.25em]" />

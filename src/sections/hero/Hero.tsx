@@ -4,7 +4,7 @@ import { Principles } from "./Principles";
 
 export function Hero() {
     return (
-        <>
+        <section className="min-h-screen flex flex-col gap-6 pt-25 sm:pt-30 md:35">
             <div className="flex flex-col lg:flex-row lg:gap-3">
                 <div>
                     <img src="/ascii-name.svg" alt="ASCII Name" />
@@ -15,7 +15,7 @@ export function Hero() {
                 </div>
             </div>
 
-            <div className="flex flex-1 w-fit sm:mt-6 md:mt-12 lg:gap-18">
+            <div className="flex flex-1 w-fit sm:mt-6 lg:gap-18">
                 <div className="flex flex-col gap-10 sm:gap-16 lg:justify-between sm:pb-40 sm:px-4 lg:pr-0 pt-2 lg:pt-4 w-full lg:w-4/5 xl:w-3/4">
                     <div className="flex flex-col mx-2 gap-5 p-4 sm:p-6 border border-accent">
                         {boxInfo.map((line) => (
@@ -61,6 +61,6 @@ export function Hero() {
                     ))}
                 </div>
             </div>
-        </>
+        </section>
     );
 }
