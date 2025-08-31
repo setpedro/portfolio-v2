@@ -13,7 +13,7 @@ export default function page() {
             </div>
 
             <div className="min-h-screen flex flex-col items-center gap-6 pt-25 sm:pt-30 px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40">
-                <div className="w-full flex flex-col lg:flex-row lg:justify-start lg:items-end lg:gap-4">
+                <div className="w-full flex flex-col lg:flex-row lg:justify-start lg:items-end gap-2 lg:gap-4">
                     <p className="text-3xl sm:text-6xl font-bold text-accent">
                         # Labs
                     </p>
