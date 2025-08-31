@@ -26,11 +26,11 @@ export function Projects() {
             </div>
 
             <div className="w-full flex justify-start">
-                <Link href="/experiments">
+                <Link href="/labs">
                     <Button size="md" color="foreground" title="More projects">
                         [ Labs
                         <span className="ml-2 mr-3 mb-2 text-3xl leading-none">
-                            ↗
+                            &#8599;
                         </span>
                         ]
                     </Button>

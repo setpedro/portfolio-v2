@@ -4,7 +4,7 @@ import { Principles } from "./Principles";
 
 export function Hero() {
     return (
-        <section className="min-h-screen flex flex-col gap-6 pt-25 sm:pt-30 md:35">
+        <section className="min-h-screen flex flex-col gap-6 pt-25 sm:pt-30">
             <div className="flex flex-col lg:flex-row lg:gap-3">
                 <div>
                     <img src="/ascii-name.svg" alt="ASCII Name" />
@@ -42,7 +42,7 @@ export function Hero() {
 
                     <div className="flex gap-1 flex-nowrap">
                         <Button size="xl" color="accent">
-                            [ View projects]
+                            [ View projects ]
                         </Button>
                         <Button size="xl" color="foreground">
                             [ Contact me ]
