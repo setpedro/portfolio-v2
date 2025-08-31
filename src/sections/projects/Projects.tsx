@@ -5,12 +5,14 @@ import Link from "next/link";
 
 export function Projects() {
     return (
-        <section className="min-h-screen flex flex-col gap-10 pt-25 sm:pt-30 md:35">
-            <p className="text-3xl sm:text-6xl font-bold text-accent">
-                # Projects
-            </p>
+        <section className="min-h-screen flex flex-col items-center gap-10 pt-25 sm:pt-30 md:35">
+            <div className="w-full flex justify-start">
+                <p className="text-3xl sm:text-6xl font-bold text-accent">
+                    # Projects
+                </p>
+            </div>
 
-            <div className="flex flex-col gap-8 mx-auto mt-10 max-w-3xl">
+            <div className="flex flex-col gap-8 mx-2 mt-10 max-w-3xl">
                 {projectsData.map((p) => (
                     <Project
                         key={p.id}
@@ -23,7 +25,7 @@ export function Projects() {
                 ))}
             </div>
 
-            <div className="flex">
+            <div className="w-full flex justify-start">
                 <Link href="/experiments">
                     <Button size="md" color="foreground" title="More projects">
                         [ Labs
