@@ -11,7 +11,7 @@ export function Navbar() {
     return (
         <div
             className={cn(
-                "flex justify-between py-5 px-4 backdrop-blur-sm bg-background/80",
+                "flex justify-between py-5 px-4 backdrop-blur-sm bg-background/60",
                 "shadow-[0_4px_6px_-2px_theme(colors.background)]"
             )}
         >

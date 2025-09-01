@@ -7,7 +7,7 @@ import { Socials } from "@/sections/socials/Socials";
 export default function Home() {
     return (
         <div className="relative">
-            <div className="fixed top-0 left-0 right-0 z-2 sm:px-2 md:px-10 lg:px-16 xl:px-34">
+            <div className="fixed top-0 left-0 right-0 z-2 sm:px-2 md:px-8 lg:px-14 xl:px-32">
                 <Navbar />
             </div>
 
