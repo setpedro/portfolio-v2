@@ -4,7 +4,7 @@ import { Principles } from "./Principles";
 
 export function Hero() {
     return (
-        <section className="min-h-screen flex flex-col gap-6 pt-25 sm:pt-30">
+        <section className="min-h-screen flex flex-col gap-6 pt-35 sm:pt-30">
             <div className="flex flex-col lg:flex-row lg:gap-3">
                 <div>
                     <img src="/ascii-name.svg" alt="ASCII Name" />
