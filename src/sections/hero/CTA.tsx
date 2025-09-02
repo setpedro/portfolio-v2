@@ -1,25 +1,14 @@
-"use client";
-
-import { Button } from "@/components/ui/Button";
-import { scrollToSection } from "@/lib/utils";
+import { ScrollButton } from "@/components/ui/ScrollButton";
 
 export default function CTA() {
     return (
         <div className="flex gap-1 flex-nowrap">
-            <Button
-                size="xl"
-                color="accent"
-                onClick={() => scrollToSection("projects")}
-            >
+            <ScrollButton sectionId="projects" size="xl" color="accent">
                 [ View projects ]
-            </Button>
-            <Button
-                size="xl"
-                color="foreground"
-                onClick={() => scrollToSection("socials")}
-            >
+            </ScrollButton>
+            <ScrollButton sectionId="socials" size="xl" color="foreground">
                 [ Contact me ]
-            </Button>
+            </ScrollButton>
         </div>
     );
 }

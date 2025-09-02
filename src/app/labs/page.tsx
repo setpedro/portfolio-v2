@@ -1,13 +1,13 @@
-import { BackFromLabs } from "@/components/BackFromLabs";
 import { LabsProject } from "@/components/LabsProject";
 import { Navbar } from "@/components/Navbar";
+import { ScrollButton } from "@/components/ui/ScrollButton";
 import { labsData } from "@/lib/consts/sections/labs";
-import React from "react";
+import { Fragment } from "react";
 
-export default function page() {
+export default function Labs() {
     return (
         <div className="relative">
-            <div className="fixed top-0 left-0 right-0 z-2 sm:px-2 md:px-10 lg:px-16 xl:px-34">
+            <div className="fixed top-0 left-0 right-0 z-2 sm:px-2 md:px-8 lg:px-14 xl:px-32">
                 <Navbar />
             </div>
 
@@ -22,16 +22,28 @@ export default function page() {
                 </div>
                 <div className="flex flex-col max-w-4xl">
                     {labsData.map((lab, index) => (
-                        <React.Fragment key={lab.id}>
+                        <Fragment key={lab.id}>
                             <LabsProject id={lab.id} info={lab.info} />
                             {index < labsData.length - 1 && (
                                 <hr className="border-t border-accent" />
                             )}
-                        </React.Fragment>
+                        </Fragment>
                     ))}
                 </div>
 
-                <BackFromLabs />
+                <div className="w-full flex justify-start">
+                    <ScrollButton
+                        sectionId="projects"
+                        size="md"
+                        color="foreground"
+                    >
+                        [ Go back
+                        <span className="ml-2 mr-3 mb-2 text-3xl leading-none">
+                            &#8601;
+                        </span>
+                        ]
+                    </ScrollButton>
+                </div>
             </div>
         </div>
     );

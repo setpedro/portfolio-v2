@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { SectionId, sectionsData } from "@/lib/consts/sections";
 
 export function useActiveSection(onHomePage: boolean) {
-    const [activeSection, setActiveSection] = useState<SectionId>("hero");
+    const [activeSection, setActiveSection] = useState<SectionId | undefined>();
 
     useEffect(() => {
         if (!onHomePage) {
