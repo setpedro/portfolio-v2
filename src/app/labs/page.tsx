@@ -7,9 +7,7 @@ import { Fragment } from "react";
 export default function Labs() {
     return (
         <div className="relative">
-            <div className="fixed top-0 left-0 right-0 z-2 sm:px-2 md:px-8 lg:px-14 xl:px-32">
-                <Navbar />
-            </div>
+            <Navbar />
 
             <div className="min-h-screen flex flex-col items-center gap-6 pt-25 sm:pt-30 px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40 pb-9">
                 <div className="w-full flex flex-col lg:flex-row lg:justify-start lg:items-end gap-2 lg:gap-4">
