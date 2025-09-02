@@ -12,8 +12,9 @@ export function useActiveSection(onHomePage: boolean) {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
-                    if (entry.isIntersecting)
+                    if (entry.isIntersecting) {
                         setActiveSection(entry.target.id as SectionId);
+                    }
                 });
             },
             { rootMargin: "0px 0px -50% 0px", threshold: 0.3 }

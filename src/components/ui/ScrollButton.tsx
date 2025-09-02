@@ -7,14 +7,16 @@ import { ReactNode } from "react";
 import { WithClassName } from "@/types";
 
 type ScrollButtonProps = {
-    sectionId: string;
+    sectionId?: string;
+    scrollToBottom?: boolean;
     children: ReactNode;
-    size: "md" | "xl";
-    color: "foreground" | "accent";
+    size?: "md" | "xl";
+    color?: "foreground" | "accent";
 } & WithClassName;
 
 export function ScrollButton({
     sectionId,
+    scrollToBottom = false,
     children,
     size = "md",
     color = "foreground",
@@ -25,9 +27,14 @@ export function ScrollButton({
     const onHomePage = pathname === "/";
 
     const handleClick = () => {
-        if (onHomePage) {
+        if (scrollToBottom) {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+            });
+        } else if (onHomePage && sectionId) {
             scrollToSection(sectionId);
-        } else {
+        } else if (sectionId) {
             router.push(`/?scroll=${sectionId}`);
         }
     };

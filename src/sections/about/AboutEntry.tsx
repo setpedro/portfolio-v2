@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 type AboutEntry = {
-    id: string;
     title: string;
     accent: string;
     content: string;
@@ -13,7 +12,6 @@ type AboutEntry = {
 };
 
 export function AboutEntry({
-    id,
     title,
     accent,
     content,

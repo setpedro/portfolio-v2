@@ -16,7 +16,7 @@ export default function Labs() {
                         # Labs
                     </p>
                     <p className="text-sm sm:text-2xl font-bold text-foreground/60">
-                        // smaller builds that taught me a lot
+                        {"// smaller builds that taught me a lot"}
                     </p>
                 </div>
                 <div className="flex flex-col max-w-4xl">

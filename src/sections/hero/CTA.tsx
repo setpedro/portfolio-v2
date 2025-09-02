@@ -6,7 +6,7 @@ export default function CTA() {
             <ScrollButton sectionId="projects" size="xl" color="accent">
                 [ View projects ]
             </ScrollButton>
-            <ScrollButton sectionId="socials" size="xl" color="foreground">
+            <ScrollButton scrollToBottom size="xl" color="foreground">
                 [ Contact me ]
             </ScrollButton>
         </div>

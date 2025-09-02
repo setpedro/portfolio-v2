@@ -8,7 +8,13 @@ export function Footer() {
 
     return (
         <footer className="border-t border-accent bg-background/80 backdrop-blur-sm">
-            <div className="w-full mx-auto px-14 xl:px-30">
+            <div className="text-center w-full -mt-24 py-8">
+                <span className="inline-block rotate-90 font-semibold text-accent text-xl">
+                    {">"}
+                </span>
+            </div>
+
+            <div className="w-full mx-auto px-14 xl:px-40">
                 <div className="flex flex-col items-center gap-6 py-12">
                     <p className="text-center text-xl sm:text-2xl font-bold text-accent">
                         Interested in working together?
@@ -32,10 +38,9 @@ export function Footer() {
                     )}
                 </div>
 
-                {/* Divider */}
                 <div className="border-t border-accent/20"></div>
 
-                <div className="flex flex-col md:flex-row md:items-end justify-between items-center gap-4 py-10">
+                <div className="flex flex-col md:flex-row md:items-end justify-between items-center gap-4 px-1 py-10">
                     <div className="text-center md:text-left">
                         <p className="font-bold mb-1">
                             © {currentYear} Pedro Serrano. All rights reserved

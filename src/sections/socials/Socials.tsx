@@ -8,7 +8,7 @@ export function Socials() {
     return (
         <section
             id="socials"
-            className="min-h-screen flex flex-col items-center gap-16 pt-25 sm:pt-30 md:35"
+            className="min-h-screen flex flex-col items-center gap-16 sm:pt-30 md:35"
         >
             <div className="w-full flex justify-start">
                 <p className="text-3xl sm:text-6xl font-bold text-accent">
@@ -17,7 +17,7 @@ export function Socials() {
             </div>
 
             <div className="flex font-semibold sm:text-xl px-4 sm:px-6">
-                <span className="mr-1">{">"}</span>
+                <span className="mr-2">{">"}</span>
                 <p>
                     connect with me across platforms and dive deeper into my
                     work

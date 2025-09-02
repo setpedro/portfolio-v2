@@ -1,14 +1,19 @@
-import { useRouter, useSearchParams } from "next/navigation";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export function useScrollRedirect(onHomePage: boolean) {
     const router = useRouter();
-    const searchParams = useSearchParams();
 
     useEffect(() => {
-        if (!onHomePage) return;
+        if (!onHomePage) {
+            return;
+        }
 
-        const scrollTarget = searchParams.get("scroll");
+        const params = new URLSearchParams(window.location.search);
+        const scrollTarget = params.get("scroll");
+
         if (scrollTarget) {
             const element = document.getElementById(scrollTarget);
             if (element) {
@@ -20,5 +25,5 @@ export function useScrollRedirect(onHomePage: boolean) {
             // remove query from URL without reload
             router.replace("/", { scroll: false });
         }
-    }, [onHomePage, searchParams, router]);
+    }, [onHomePage, router]);
 }

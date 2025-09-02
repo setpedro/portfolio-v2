@@ -1,6 +1,6 @@
 export const boxInfo = [
-    "full-stack developer focused on web apps, crypto & systems programming",
-    "currently: looking for my next role or project",
+    "full-stack developer focused on web apps, blockchain tools & systems programming",
+    "currently: studying Computer Science, still building things daily like always",
 ];
 
 export const principles = [

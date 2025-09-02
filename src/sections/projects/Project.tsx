@@ -29,7 +29,7 @@ export function Project({ title, info, webLink, ghLink, logoExt }: Project) {
                 </div>
                 <div className="w-full flex flex-col sm:justify-between gap-2.5 sm:gap-0">
                     <div className="flex font-semibold">
-                        <span className="mr-1">{">"}</span>
+                        <span className="mr-2">{">"}</span>
                         <p>{info}</p>
                     </div>
                     <div className="flex justify-end gap-1 p-2">

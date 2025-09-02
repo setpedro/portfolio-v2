@@ -12,7 +12,7 @@ export function About() {
                     # About
                 </p>
                 <p className="text-xl sm:text-2xl font-bold text-foreground/60">
-                    // who am I and why do I code
+                    {"// who am I and why do I code"}
                 </p>
             </div>
 
@@ -31,7 +31,6 @@ export function About() {
                     {aboutData.map((section, index) => (
                         <AboutEntry
                             key={section.id}
-                            id={section.id}
                             title={section.title}
                             accent={section.accent}
                             content={section.content}

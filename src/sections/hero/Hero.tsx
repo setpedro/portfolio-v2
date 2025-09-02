@@ -1,6 +1,7 @@
 import { boxInfo, principles } from "@/lib/consts/sections/hero";
 import { Principles } from "./Principles";
 import CTA from "./CTA";
+import Image from "next/image";
 
 export function Hero() {
     return (
@@ -10,7 +11,13 @@ export function Hero() {
         >
             <div className="flex flex-col lg:flex-row lg:gap-3">
                 <div>
-                    <img src="/ascii-name.svg" alt="ASCII Name" />
+                    <Image
+                        src="/ascii-name.svg"
+                        alt="ASCII Name"
+                        width={900}
+                        height={120}
+                        style={{ objectFit: "contain" }}
+                    />
                 </div>
                 <div className="flex gap-3 font-bold text-lg md:text-xl lg:text-2xl mt-auto px-1 lg:px-0 lg:py-1.5">
                     <p>as</p>
@@ -26,7 +33,7 @@ export function Hero() {
                                 key={line}
                                 className="flex font-semibold sm:text-xl"
                             >
-                                <span className="mr-1">{">"}</span>
+                                <span className="mr-2">{">"}</span>
                                 <p>{line}</p>
                             </div>
                         ))}
