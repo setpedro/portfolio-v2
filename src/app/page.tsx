@@ -1,9 +1,9 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { About } from "@/sections/about/About";
+import { About } from "@/sections/about";
 import { Hero } from "@/sections/hero";
 import { Projects } from "@/sections/projects";
-import { Socials } from "@/sections/socials/Socials";
+import { Socials } from "@/sections/socials";
 
 export default function Home() {
     return (

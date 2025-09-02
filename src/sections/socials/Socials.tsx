@@ -1,10 +1,6 @@
-import Link from "next/link";
-import { Icon } from "@iconify/react";
-import { iconMap, socialsData } from "@/lib/consts/sections/socials";
+import { PlatformsBox } from "./PlatformsBox";
 
 export function Socials() {
-    const nonEmailSocials = socialsData.filter((s) => s.platform !== "email");
-
     return (
         <section
             id="socials"
@@ -24,30 +20,7 @@ export function Socials() {
                 </p>
             </div>
 
-            <div className="w-full flex flex-col items-center gap-6">
-                <div className="w-full max-w-4xl grid grid-cols-2 sm:grid-cols-4 gap-6 px-8 sm:px-10">
-                    {nonEmailSocials.map((social) => (
-                        <Link
-                            key={social.id}
-                            href={social.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group flex flex-col items-center justify-center font-bold p-4 border border-accent hover:bg-accent/10 text-foreground/60 hover:text-foreground transition-colors"
-                        >
-                            <div className="mb-2">
-                                <Icon
-                                    icon={iconMap[social.platform]}
-                                    width="48"
-                                    height="48"
-                                />
-                            </div>
-                            <span className="text-sm sm:text-base">
-                                {social.platform}
-                            </span>
-                        </Link>
-                    ))}
-                </div>
-            </div>
+            <PlatformsBox />
         </section>
     );
 }
