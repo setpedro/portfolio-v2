@@ -5,7 +5,7 @@ export function About() {
     return (
         <section
             id="about"
-            className="min-h-screen flex flex-col items-center gap-20 pt-25 sm:pt-30 md:35"
+            className="min-h-screen flex flex-col items-center gap-20 pt-25 sm:pt-30 md:35 lg:px-10 xl:px-20"
         >
             <div className="w-full flex flex-col lg:flex-row lg:justify-start lg:items-end gap-2 lg:gap-4">
                 <p className="text-3xl sm:text-6xl font-bold text-accent">
