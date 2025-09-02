@@ -11,6 +11,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
     title: "Pedro Serrano - Dev Portfolio",
     description: "Full-stack developer",
+    icons: {
+        icon: "/favicon.png",
+    },
 };
 
 export default function RootLayout({

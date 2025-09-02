@@ -47,7 +47,24 @@ export function Footer() {
 
                     <div className="text-center md:text-right md:mb-0.5">
                         <p className="text-foreground/40 text-xs">
-                            Built with Next.js & Tailwind CSS
+                            Built with{" "}
+                            <a
+                                href="https://nextjs.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-accent"
+                            >
+                                Next.js
+                            </a>{" "}
+                            &{" "}
+                            <a
+                                href="https://tailwindcss.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline hover:text-accent"
+                            >
+                                Tailwind CSS
+                            </a>
                         </p>
                     </div>
                 </div>
