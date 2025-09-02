@@ -10,7 +10,7 @@ export default function Home() {
         <div className="relative">
             <Navbar />
 
-            <div className="px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40 border">
+            <div className="px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40">
                 <Hero />
                 <Projects />
                 <About />
