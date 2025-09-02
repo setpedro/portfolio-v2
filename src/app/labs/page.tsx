@@ -1,8 +1,7 @@
+import { BackFromLabs } from "@/components/BackFromLabs";
 import { LabsProject } from "@/components/LabsProject";
 import { Navbar } from "@/components/Navbar";
-import { Button } from "@/components/ui/Button";
 import { labsData } from "@/lib/consts/sections/labs";
-import Link from "next/link";
 import React from "react";
 
 export default function page() {
@@ -32,21 +31,7 @@ export default function page() {
                     ))}
                 </div>
 
-                <div className="w-full flex justify-start">
-                    <Link href="/#projects">
-                        <Button
-                            size="md"
-                            color="foreground"
-                            title="More projects"
-                        >
-                            [ Go back
-                            <span className="ml-2 mr-3 mb-2 text-3xl leading-none">
-                                &#8601;
-                            </span>
-                            ]
-                        </Button>
-                    </Link>
-                </div>
+                <BackFromLabs />
             </div>
         </div>
     );

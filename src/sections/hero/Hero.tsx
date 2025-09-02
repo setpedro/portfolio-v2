@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/Button";
 import { boxInfo, principles } from "@/lib/consts/sections/hero";
 import { Principles } from "./Principles";
+import CTA from "./CTA";
 
 export function Hero() {
     return (
@@ -43,14 +43,7 @@ export function Hero() {
                         ))}
                     </div>
 
-                    <div className="flex gap-1 flex-nowrap">
-                        <Button size="xl" color="accent">
-                            [ View projects ]
-                        </Button>
-                        <Button size="xl" color="foreground">
-                            [ Contact me ]
-                        </Button>
-                    </div>
+                    <CTA />
                 </div>
 
                 {/* desktop principles */}
