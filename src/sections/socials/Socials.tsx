@@ -7,7 +7,10 @@ export function Socials() {
     const emailSocial = socialsData.find((s) => s.platform === "email");
 
     return (
-        <section className="min-h-screen flex flex-col items-center gap-16 pt-25 sm:pt-30 md:35">
+        <section
+            id="socials"
+            className="min-h-screen flex flex-col items-center gap-16 pt-25 sm:pt-30 md:35"
+        >
             <div className="w-full flex justify-start">
                 <p className="text-3xl sm:text-6xl font-bold text-accent">
                     # Socials
