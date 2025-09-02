@@ -1,3 +1,4 @@
+import { Footer } from "@/components/Footer";
 import { LabsProject } from "@/components/LabsProject";
 import { Navbar } from "@/components/Navbar";
 import { ScrollButton } from "@/components/ui/ScrollButton";
@@ -9,7 +10,7 @@ export default function Labs() {
         <div className="relative">
             <Navbar />
 
-            <div className="min-h-screen flex flex-col items-center gap-6 pt-25 sm:pt-30 px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40 pb-9">
+            <div className="min-h-screen flex flex-col items-center gap-6 pt-25 sm:pt-30 px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40 pb-25">
                 <div className="w-full flex flex-col lg:flex-row lg:justify-start lg:items-end gap-2 lg:gap-4">
                     <p className="text-3xl sm:text-6xl font-bold text-accent">
                         # Labs
@@ -43,6 +44,7 @@ export default function Labs() {
                     </ScrollButton>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 }

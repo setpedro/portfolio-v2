@@ -43,7 +43,7 @@ export function About() {
                     <div className="flex items-center gap-2 mt-6">
                         <span className="text-accent">pedro@portfolio</span>
                         <span>: ~/about $</span>
-                        <span className="bg-white text-black font-mono animate-pulse">
+                        <span className="bg-white text-black animate-pulse">
                             _
                         </span>
                     </div>

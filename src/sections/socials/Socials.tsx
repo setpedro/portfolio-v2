@@ -4,7 +4,6 @@ import { iconMap, socialsData } from "@/lib/consts/sections/socials";
 
 export function Socials() {
     const nonEmailSocials = socialsData.filter((s) => s.platform !== "email");
-    const emailSocial = socialsData.find((s) => s.platform === "email");
 
     return (
         <section
@@ -42,28 +41,12 @@ export function Socials() {
                                     height="48"
                                 />
                             </div>
-                            <span className="text-sm sm:text-base uppercase">
+                            <span className="text-sm sm:text-base">
                                 {social.platform}
                             </span>
                         </Link>
                     ))}
                 </div>
-
-                {emailSocial && (
-                    <Link
-                        href={emailSocial.url}
-                        className="flex flex-col items-center gap-1 font-bold text-foreground/60 hover:text-foreground"
-                    >
-                        <Icon
-                            icon={iconMap[emailSocial.platform]}
-                            width="48"
-                            height="48"
-                        />
-                        <span className="text-lg sm:text-xl">
-                            {emailSocial.platform}
-                        </span>
-                    </Link>
-                )}
             </div>
         </section>
     );
