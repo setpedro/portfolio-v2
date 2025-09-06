@@ -7,40 +7,55 @@ export function Hero() {
     return (
         <section
             id="hero"
-            className="min-h-screen flex flex-col gap-6 pt-35 sm:pt-30 lg:px-10 xl:px-16"
+            className="min-h-screen flex flex-col justify-center pt-10 lg:px-10 xl:px-16"
         >
-            <div className="flex flex-col lg:flex-row lg:gap-3">
-                <div>
-                    <Image
-                        src="/ascii-name.svg"
-                        alt="ASCII Name"
-                        width={900}
-                        height={120}
-                        style={{ objectFit: "contain" }}
-                    />
+            <div className="flex flex-col md:gap-6">
+                <div className="flex flex-col lg:flex-row lg:gap-3">
+                    <div>
+                        <Image
+                            src="/ascii-name.svg"
+                            alt="ASCII Name"
+                            width={900}
+                            height={120}
+                            style={{ objectFit: "contain" }}
+                        />
+                    </div>
+                    <div className="flex gap-3 font-bold text-lg md:text-xl lg:text-2xl mt-auto px-1 lg:px-0 lg:py-1.5">
+                        <p>as</p>
+                        <p className="text-accent">setPedro</p>
+                    </div>
                 </div>
-                <div className="flex gap-3 font-bold text-lg md:text-xl lg:text-2xl mt-auto px-1 lg:px-0 lg:py-1.5">
-                    <p>as</p>
-                    <p className="text-accent">setPedro</p>
-                </div>
-            </div>
 
-            <div className="flex flex-1 w-fit sm:mt-6 lg:gap-18">
-                <div className="flex flex-col gap-10 sm:gap-16 lg:justify-between sm:pb-40 sm:px-4 lg:pr-0 pt-2 lg:pt-4 w-full lg:w-4/5 xl:w-3/4">
-                    <div className="flex flex-col mx-2 gap-5 p-4 sm:p-6 border border-accent">
-                        {boxInfo.map((line) => (
-                            <div
-                                key={line}
-                                className="flex font-semibold sm:text-xl"
-                            >
-                                <span className="mr-2">{">"}</span>
-                                <p>{line}</p>
-                            </div>
-                        ))}
+                <div className="flex flex-1 w-fit sm:mt-6 lg:gap-18">
+                    <div className="flex flex-col gap-10 sm:gap-16 lg:justify-between sm:px-4 lg:pr-0 pt-2 lg:pt-4 w-full lg:w-4/5 xl:w-3/4">
+                        <div className="flex flex-col mx-2 gap-5 p-4 sm:p-6 border border-accent">
+                            {boxInfo.map((line) => (
+                                <div
+                                    key={line}
+                                    className="flex font-semibold sm:text-xl"
+                                >
+                                    <span className="mr-2">{">"}</span>
+                                    <p>{line}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* mobile principles */}
+                        <div className="lg:hidden flex justify-end pr-6 gap-4 sm:px-6 sm:gap-8 md:gap-14">
+                            {principles.map((p) => (
+                                <Principles
+                                    key={p.title}
+                                    title={p.title}
+                                    items={p.items}
+                                />
+                            ))}
+                        </div>
+
+                        <CTA />
                     </div>
 
-                    {/* mobile principles */}
-                    <div className="lg:hidden flex justify-end pr-6 gap-4 sm:px-6 sm:gap-8 md:gap-14">
+                    {/* desktop principles */}
+                    <div className="hidden lg:flex lg:flex-col gap-20">
                         {principles.map((p) => (
                             <Principles
                                 key={p.title}
@@ -49,19 +64,6 @@ export function Hero() {
                             />
                         ))}
                     </div>
-
-                    <CTA />
-                </div>
-
-                {/* desktop principles */}
-                <div className="hidden lg:flex lg:flex-col gap-20">
-                    {principles.map((p) => (
-                        <Principles
-                            key={p.title}
-                            title={p.title}
-                            items={p.items}
-                        />
-                    ))}
                 </div>
             </div>
         </section>
