@@ -14,6 +14,26 @@ export const metadata: Metadata = {
     icons: {
         icon: "/favicon.png",
     },
+    openGraph: {
+        title: "Pedro Serrano - Dev Portfolio",
+        description: "Full-stack developer",
+        url: "https://pedroserrano.dev",
+        images: [
+            {
+                url: "/meta.png",
+                width: 1300,
+                height: 650,
+                alt: "Screenshot of Pedro Serrano's portfolio logo",
+            },
+        ],
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Pedro Serrano - Dev Portfolio",
+        description: "Full-stack developer",
+        images: ["/metadata.png"],
+    },
 };
 
 export default function RootLayout({
