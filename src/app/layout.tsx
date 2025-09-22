@@ -20,7 +20,7 @@ export const metadata: Metadata = {
         url: "https://pedroserrano.dev",
         images: [
             {
-                url: "/meta.png",
+                url: "https://pedroserrano.dev/metadata.png",
                 width: 1300,
                 height: 650,
                 alt: "Screenshot of Pedro Serrano's portfolio logo",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Pedro Serrano - Dev Portfolio",
         description: "Full-stack developer",
-        images: ["/metadata.png"],
+        images: ["https://pedroserrano.dev/metadata.png"],
     },
 };
 
