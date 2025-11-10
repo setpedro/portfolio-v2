@@ -1,10 +1,5 @@
 export const socialsData = [
     {
-        id: "twitter",
-        platform: "twitter",
-        url: "https://twitter.com/setpedro_",
-    },
-    {
         id: "github",
         platform: "github",
         url: "https://github.com/setpedro",
@@ -23,7 +18,6 @@ export const socialsData = [
 ];
 
 export const iconMap: Record<string, string> = {
-    twitter: "pajamas:twitter",
     github: "mdi:github",
     linkedin: "mdi:linkedin",
     medium: "ri:medium-fill",
