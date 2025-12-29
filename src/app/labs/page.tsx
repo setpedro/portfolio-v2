@@ -24,7 +24,7 @@ export default function Labs() {
                         <Fragment key={lab.id}>
                             <LabsProject id={lab.id} info={lab.info} />
                             {index < labsData.length - 1 && (
-                                <hr className="border-t border-accent" />
+                                <hr className="border-t border-accent/20" />
                             )}
                         </Fragment>
                     ))}
