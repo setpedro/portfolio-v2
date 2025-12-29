@@ -63,7 +63,7 @@ export function AboutEntry({
                                 [ collapse ]
                             </div>
                         </div>
-                        <div className="text-foreground/80 leading-relaxed whitespace-pre-line">
+                        <div className="text-foreground/80 leading-relaxed whitespace-pre-line opacity-0 animate-[fadeIn_0.25s_ease-out_forwards]">
                             {content}
                         </div>
                     </div>
