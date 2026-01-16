@@ -1,7 +1,9 @@
 import { Footer } from "@/components/Footer";
 import { LabsProject } from "@/components/LabsProject";
 import { Navbar } from "@/components/Navbar";
+import { SectionHeader } from "@/components/SectionHeader";
 import { ScrollButton } from "@/components/ui/ScrollButton";
+import { sectionHeaders } from "@/lib/consts/sections";
 import { labsData } from "@/lib/consts/sections/labs";
 import { Fragment } from "react";
 
@@ -11,14 +13,10 @@ export default function Labs() {
             <Navbar />
 
             <div className="min-h-screen flex flex-col items-center gap-6 pt-25 sm:pt-30 px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40 pb-25">
-                <div className="w-full flex flex-col lg:flex-row lg:justify-start lg:items-end gap-2 lg:gap-4">
-                    <p className="text-3xl sm:text-6xl font-bold text-accent">
-                        # Labs
-                    </p>
-                    <p className="text-sm sm:text-2xl font-bold text-foreground/60">
-                        {"// smaller builds that taught me a lot"}
-                    </p>
-                </div>
+                <SectionHeader
+                    title={sectionHeaders.labs.title}
+                    subtitle={sectionHeaders.labs.subtitle}
+                />
                 <div className="flex flex-col max-w-4xl">
                     {labsData.map((lab, index) => (
                         <Fragment key={lab.id}>

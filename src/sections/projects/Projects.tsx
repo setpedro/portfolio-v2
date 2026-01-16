@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/Button";
 import { projectsData } from "@/lib/consts/sections/projects";
 import { Project } from "./Project";
 import Link from "next/link";
+import { SectionHeader } from "@/components/SectionHeader";
+import { sectionHeaders } from "@/lib/consts/sections";
 
 export function Projects() {
     return (
@@ -9,11 +11,7 @@ export function Projects() {
             id="projects"
             className="min-h-screen flex flex-col items-center gap-10 sm:pt-30 md:35 lg:px-10 xl:px-20"
         >
-            <div className="w-full flex justify-start">
-                <p className="text-3xl sm:text-6xl font-bold text-accent">
-                    # Projects
-                </p>
-            </div>
+            <SectionHeader title={sectionHeaders.projects.title} />
 
             <div className="flex flex-col gap-8 mx-2 mt-10 max-w-3xl">
                 {projectsData.map((p) => (

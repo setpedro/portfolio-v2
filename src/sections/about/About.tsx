@@ -1,5 +1,7 @@
 import { aboutData } from "@/lib/consts/sections/about";
 import { AboutEntry } from "./AboutEntry";
+import { SectionHeader } from "@/components/SectionHeader";
+import { sectionHeaders } from "@/lib/consts/sections";
 
 export function About() {
     return (
@@ -7,14 +9,10 @@ export function About() {
             id="about"
             className="min-h-screen flex flex-col items-center gap-20 pt-25 sm:pt-30 md:35 lg:px-10 xl:px-20"
         >
-            <div className="w-full flex flex-col lg:flex-row lg:justify-start lg:items-end gap-2 lg:gap-4">
-                <p className="text-3xl sm:text-6xl font-bold text-accent">
-                    # About
-                </p>
-                <p className="text-xl sm:text-2xl font-bold text-foreground/60">
-                    {"// who am I and why do I code"}
-                </p>
-            </div>
+            <SectionHeader
+                title={sectionHeaders.about.title}
+                subtitle={sectionHeaders.about.subtitle}
+            />
 
             <div className="w-full max-w-4xl">
                 <div className="relative px-6 py-4">
