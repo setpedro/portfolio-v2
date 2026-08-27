@@ -26,7 +26,7 @@ export function WorkEntryDesktop({
     const hasDetails = entry.details.length > 0;
 
     return (
-        <div className="relative flex flex-col p-2 w-full max-w-7xl bg-background">
+        <div className="relative flex flex-col p-2 w-full max-w-7xl bg-background [overflow-anchor:none]">
             <div className="absolute inset-0 pointer-events-none">
                 {cornerSide === "left" ? (
                     <>

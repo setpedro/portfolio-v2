@@ -24,7 +24,7 @@ export function WorkEntryMobile({
     const hasDetails = entry.details.length > 0;
 
     return (
-        <div className="relative flex flex-col gap-2 p-2 w-full max-w-[512px] bg-background">
+        <div className="relative flex flex-col gap-2 p-2 w-full max-w-[512px] bg-background [overflow-anchor:none]">
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-accent"></div>
                 <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-accent"></div>
