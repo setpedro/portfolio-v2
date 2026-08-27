@@ -21,9 +21,14 @@ export function WorkEntryMobile({
             <span>]</span>
         </>
     );
+    const hasDetails = entry.details.length > 0;
 
     return (
-        <div className="flex flex-col gap-2 border border-accent/20 p-2 w-full max-w-[512px] bg-background">
+        <div className="relative flex flex-col gap-2 p-2 w-full max-w-[512px] bg-background">
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-accent"></div>
+                <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-accent"></div>
+            </div>
             {entry.logo && (
                 <div className="mx-auto relative w-full max-w-[512px] aspect-square">
                     <Image
@@ -38,20 +43,29 @@ export function WorkEntryMobile({
 
             <div className="flex flex-col w-full">
                 <div className="flex justify-end">
-                    <button
-                        type="button"
-                        onClick={onToggle}
-                        className="group cursor-pointer text-foreground/60 hover:text-foreground transition-colors"
-                    >
-                        <div className="text-sm text-foreground/60 group-hover:text-foreground transition-colors">
-                            [ {isExpanded ? "collapse" : "expand"} ]
+                    {hasDetails ? (
+                        <button
+                            type="button"
+                            onClick={onToggle}
+                            className="group cursor-pointer text-foreground/60 hover:text-foreground transition-colors"
+                        >
+                            <div className="text-sm text-foreground/60 group-hover:text-foreground transition-colors">
+                                [ {isExpanded ? "collapse" : "expand"} ]
+                            </div>
+                        </button>
+                    ) : (
+                        <div
+                            aria-hidden="true"
+                            className="text-sm text-foreground/60 invisible"
+                        >
+                            [ expand ]
                         </div>
-                    </button>
+                    )}
                 </div>
 
                 <div className="flex flex-col gap-3">
                     <div className="flex flex-col gap-2 w-full">
-                        <div className="flex flex-col gap-1 font-semibold text-xl">
+                        <div className="flex flex-wrap gap-x-2 gap-y-1 font-semibold text-xl">
                             {entry.link ? (
                                 <Link
                                     href={entry.link}

@@ -4,12 +4,14 @@ import Link from "next/link";
 
 type WorkEntryDesktop = {
     entry: WorkEntry;
+    cornerSide: "left" | "right";
     isExpanded: boolean;
     onToggle: () => void;
 };
 
 export function WorkEntryDesktop({
     entry,
+    cornerSide,
     isExpanded,
     onToggle,
 }: WorkEntryDesktop) {
@@ -21,9 +23,23 @@ export function WorkEntryDesktop({
             <span>]</span>
         </>
     );
+    const hasDetails = entry.details.length > 0;
 
     return (
-        <div className="flex items-stretch gap-2 border border-accent/20 p-2 w-full max-w-7xl bg-background">
+        <div className="relative flex items-stretch gap-2 p-2 w-full max-w-7xl bg-background">
+            <div className="absolute inset-0 pointer-events-none">
+                {cornerSide === "left" ? (
+                    <>
+                        <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-accent"></div>
+                        <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-accent"></div>
+                    </>
+                ) : (
+                    <>
+                        <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-accent"></div>
+                        <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-accent"></div>
+                    </>
+                )}
+            </div>
             {entry.logo && (
                 <Image
                     src={entry.logo}
@@ -36,15 +52,24 @@ export function WorkEntryDesktop({
             )}
             <div className="flex flex-col justify-between self-stretch w-full">
                 <div className="flex justify-end">
-                    <button
-                        type="button"
-                        onClick={onToggle}
-                        className="group cursor-pointer text-foreground/60 hover:text-foreground transition-colors"
-                    >
-                        <div className="text-sm text-foreground/60 group-hover:text-foreground transition-colors">
-                            [ {isExpanded ? "collapse" : "expand"} ]
+                    {hasDetails ? (
+                        <button
+                            type="button"
+                            onClick={onToggle}
+                            className="group cursor-pointer text-foreground/60 hover:text-foreground transition-colors"
+                        >
+                            <div className="text-sm text-foreground/60 group-hover:text-foreground transition-colors">
+                                [ {isExpanded ? "collapse" : "expand"} ]
+                            </div>
+                        </button>
+                    ) : (
+                        <div
+                            aria-hidden="true"
+                            className="text-sm text-foreground/60 invisible"
+                        >
+                            [ expand ]
                         </div>
-                    </button>
+                    )}
                 </div>
                 <div className="flex flex-col gap-3">
                     <div className="flex flex-col gap-1 w-full">

@@ -9,7 +9,7 @@ export function Projects() {
     return (
         <section
             id="projects"
-            className="min-h-screen flex flex-col items-center gap-10 sm:pt-30 md:35 lg:px-10 xl:px-20"
+            className="min-h-screen flex flex-col items-center gap-10 pt-25 sm:pt-30 md:pt-35 lg:px-10 xl:px-20"
         >
             <SectionHeader title={sectionHeaders.projects.title} />
 

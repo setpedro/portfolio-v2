@@ -18,16 +18,17 @@ export function Work() {
     return (
         <section
             id="work"
-            className="min-h-screen flex flex-col items-center gap-10 sm:pt-30 md:35 lg:px-10 xl:px-20"
+            className="min-h-screen flex flex-col items-center gap-10 pt-25 sm:pt-30 md:pt-35 lg:px-10 xl:px-20"
         >
             <SectionHeader title="Work" />
 
-            <div className="w-full max-w-7xl">
-                {workData.map((entry) => (
+            <div className="w-full max-w-7xl mt-8">
+                {workData.map((entry, index) => (
                     <div key={entry.id}>
                         <div className="hidden md:block">
                             <WorkEntryDesktop
                                 entry={entry}
+                                cornerSide={index % 2 === 0 ? "left" : "right"}
                                 isExpanded={expandedWorkId === entry.id}
                                 onToggle={() => handleToggle(entry.id)}
                             />

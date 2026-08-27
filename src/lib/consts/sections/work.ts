@@ -7,7 +7,7 @@ export const workData = [
         logo: "/loris-tools.png",
         logoAlt: "loris.tools logo",
         description:
-            "crypto derivatives data platform featuring perps & exchange analytics across funding, open interest, volume, liquidations, order-book depth, options and RWA",
+            "crypto derivatives data platform for perps analytics across funding, open interest, volume, liquidations, order-book depth, options and RWA",
         results: ["~50k MAU", "40+ exchanges", "paid API + subs"],
         details: [
             "rebuilt the frontend, making it dramatically faster and grew it to ~50k monthly users",
@@ -19,7 +19,7 @@ export const workData = [
     },
     {
         id: "private-client",
-        name: "private client work",
+        name: "client work",
         role: "systems engineer",
         link: null,
         logo: "/private-client.svg",
