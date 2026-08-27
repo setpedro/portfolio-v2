@@ -4,6 +4,7 @@ import { About } from "@/sections/about";
 import { Hero } from "@/sections/hero";
 import { Projects } from "@/sections/projects";
 import { Socials } from "@/sections/socials";
+import { Work } from "@/sections/work";
 
 export default function Home() {
     return (
@@ -12,6 +13,7 @@ export default function Home() {
 
             <div className="px-4 sm:px-8 md:px-16 lg:px-22 xl:px-40">
                 <Hero />
+                <Work />
                 <Projects />
                 <About />
                 <Socials />

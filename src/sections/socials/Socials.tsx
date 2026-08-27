@@ -6,7 +6,7 @@ export function Socials() {
     return (
         <section
             id="socials"
-            className="min-h-screen flex flex-col items-center gap-16 sm:pt-30 md:35 lg:px-10 xl:px-20"
+            className="min-h-screen flex flex-col items-center gap-16 pt-25 sm:pt-30 md:pt-35 lg:px-10 xl:px-20"
         >
             <SectionHeader title={sectionHeaders.socials.title} />
 
