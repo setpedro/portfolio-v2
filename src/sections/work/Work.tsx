@@ -1,5 +1,6 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { WorkEntryDesktop } from "./WorkEntryDesktop";
+import { WorkEntryMobile } from "./WorkEntryMobile";
 
 export function Work() {
     return (
@@ -9,7 +10,12 @@ export function Work() {
         >
             <SectionHeader title="Work" />
 
-            <WorkEntryDesktop />
+            <div className="hidden md:block w-full max-w-7xl">
+                <WorkEntryDesktop />
+            </div>
+            <div className="md:hidden w-full max-w-7xl flex justify-center">
+                <WorkEntryMobile />
+            </div>
         </section>
     );
 }
