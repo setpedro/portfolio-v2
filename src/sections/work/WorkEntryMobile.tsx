@@ -1,27 +1,50 @@
+import { WorkEntry } from "@/lib/consts/sections/work";
 import Image from "next/image";
 import Link from "next/link";
 
-export function WorkEntryMobile() {
+type WorkEntryMobile = {
+    entry: WorkEntry;
+    isExpanded: boolean;
+    onToggle: () => void;
+};
+
+export function WorkEntryMobile({
+    entry,
+    isExpanded,
+    onToggle,
+}: WorkEntryMobile) {
+    const titleContent = (
+        <>
+            <span>[</span>
+            {entry.link && <span>&#8599;</span>}
+            <span>{entry.name}</span>
+            <span>]</span>
+        </>
+    );
+
     return (
         <div className="flex flex-col gap-2 border border-accent/20 p-2 w-full max-w-[512px] bg-background">
-            <div className="mx-auto relative w-full max-w-[512px] aspect-square">
-                <Image
-                    src="/loris-tools.png"
-                    alt="loris.tools logo"
-                    fill
-                    sizes="(max-width: 768px) 100vw"
-                    className="object-cover"
-                />
-            </div>
+            {entry.logo && (
+                <div className="mx-auto relative w-full max-w-[512px] aspect-square">
+                    <Image
+                        src={entry.logo}
+                        alt={entry.logoAlt ?? entry.name}
+                        fill
+                        sizes="(max-width: 768px) 100vw"
+                        className="object-contain"
+                    />
+                </div>
+            )}
 
             <div className="flex flex-col w-full">
                 <div className="flex justify-end">
                     <button
                         type="button"
+                        onClick={onToggle}
                         className="group cursor-pointer text-foreground/60 hover:text-foreground transition-colors"
                     >
                         <div className="text-sm text-foreground/60 group-hover:text-foreground transition-colors">
-                            [ expand ]
+                            [ {isExpanded ? "collapse" : "expand"} ]
                         </div>
                     </button>
                 </div>
@@ -29,45 +52,49 @@ export function WorkEntryMobile() {
                 <div className="flex flex-col gap-3">
                     <div className="flex flex-col gap-2 w-full">
                         <div className="flex flex-col gap-1 font-semibold text-xl">
-                            <Link
-                                href="https://loris.tools"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-accent hover:text-accent/60 transition-colors"
-                            >
-                                <span>[</span>
-                                <span>&#8599;</span>
-                                <span>loris.tools</span>
-                                <span>]</span>
-                            </Link>
-                            <p>founding engineer</p>
+                            {entry.link ? (
+                                <Link
+                                    href={entry.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-accent hover:text-accent/60 transition-colors"
+                                >
+                                    {titleContent}
+                                </Link>
+                            ) : (
+                                <span className="flex items-center gap-2 text-accent">
+                                    {titleContent}
+                                </span>
+                            )}
+                            <p>{entry.role}</p>
                         </div>
 
                         <div className="flex font-semibold">
                             <span className="mr-2">{">"}</span>
-                            <p>
-                                crypto derivatives data platform featuring perps
-                                & exchange analytics across funding, open
-                                interest, volume, liquidations, order-book
-                                depth, options and RWA
-                            </p>
+                            <p>{entry.description}</p>
                         </div>
                     </div>
 
                     <div className="flex items-center">
                         <div className="flex flex-wrap items-center gap-3 font-semibold text-accent">
-                            <span>~50k MAU</span>
-                            <span className="w-1 h-1 bg-accent"></span>
-                            <span>40+ exchanges</span>
-                            <span className="w-1 h-1 bg-accent"></span>
-                            <span>paid API + subs</span>
+                            {entry.results.map((result, index) => (
+                                <span
+                                    key={result}
+                                    className="flex items-center gap-3"
+                                >
+                                    {index > 0 && (
+                                        <span className="w-1 h-1 bg-accent"></span>
+                                    )}
+                                    <span>{result}</span>
+                                </span>
+                            ))}
                         </div>
                     </div>
                 </div>
 
                 <div className="flex justify-end">
                     <p className="text-sm text-foreground/60">
-                        Oct 2025 - Present
+                        {entry.timeline}
                     </p>
                 </div>
             </div>
