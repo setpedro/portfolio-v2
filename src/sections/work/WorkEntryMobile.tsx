@@ -104,6 +104,32 @@ export function WorkEntryMobile({
                             ))}
                         </div>
                     </div>
+
+                    {isExpanded && (
+                        <div className="flex flex-col justify-between gap-3 font-semibold text-foreground/60 opacity-0 animate-[fadeIn_0.25s_ease-out_forwards]">
+                            <div className="flex flex-col gap-3">
+                                {entry.details.map((detail) => (
+                                    <div key={detail} className="flex">
+                                        <span className="mr-2">{">"}</span>
+                                        <p>{detail}</p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex flex-wrap items-center gap-3 pl-5">
+                                {entry.stack.map((tech, index) => (
+                                    <span
+                                        key={tech}
+                                        className="flex items-center gap-3"
+                                    >
+                                        {index > 0 && (
+                                            <span className="w-1 h-1 bg-foreground/60"></span>
+                                        )}
+                                        <span>{tech}</span>
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 <div className="flex justify-end">

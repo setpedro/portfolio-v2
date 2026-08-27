@@ -10,11 +10,11 @@ export const workData = [
             "crypto derivatives data platform for perps analytics across funding, open interest, volume, liquidations, order-book depth, options and RWA",
         results: ["~50k MAU", "40+ exchanges", "paid API + subs"],
         details: [
-            "rebuilt the frontend, making it dramatically faster and grew it to ~50k monthly users",
+            "rebuilt the frontend, dramatically improving performance and supporting rapid user growth",
             "built the paid API + subscription product, turning free traction into paying users",
             "expanded the product with new dashboards and data pipelines across 40+ exchanges",
         ],
-        stack: ["Python", "Next.js", "Django", "AWS", "Vercel"],
+        stack: ["Python", "Next.js", "Django", "ClickHouse", "AWS"],
         timeline: "Oct 2025 - Present",
     },
     {
@@ -30,7 +30,7 @@ export const workData = [
             "cross-exchange funding-rate arbitrage bot, delivered end to end and iterated on",
             "low-latency Solana execution infrastructure with real-time on-chain detection",
         ],
-        stack: ["Python", "Solana", "exchange & DEX APIs"],
+        stack: ["Python", "Solana", "Helius", "exchange & DEX APIs"],
         timeline: "2025 - Present",
     },
     {
@@ -44,7 +44,7 @@ export const workData = [
             "onchain rewards dApp for VinuChain — gas-monetization program letting dapps earn from the gas they generate",
         results: ["smart-contract integration", "gas monetization"],
         details: [],
-        stack: ["Next.js", "Solidity"], // ⚠️ confirm — add your contract lib (ethers/wagmi/web3.js) if you want
+        stack: ["Next.js", "Solidity"],
         timeline: "Nov 2024",
     },
 ];
